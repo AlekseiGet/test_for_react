@@ -1,0 +1,27 @@
+.my__limit {
+    width: 100%;
+        padding: 5px 15px;
+        margin: 5px 10px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        background: #101010b2;
+        color: #fff;
+        font-size: 1.5em;
+   
+}
+ span {
+    margin:0px  20px;
+    color: rgb(107, 101, 101);
+ }
+.my__limit:hover {
+    background: #252525;
+    box-shadow: 0px 0px 90px 5px #fff;
+    
+}
+button{
+    margin: 0px 10px;
+    padding: 3px 9px;
+    background: rgb(107, 101, 101);
+    border-radius: 4px;
+    color: #fff;
+}

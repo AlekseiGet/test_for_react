@@ -1,0 +1,15 @@
+.my__select {
+    width: 100%;
+        padding: 5px 15px;
+        margin: 5px 10px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        background: #101010b2;
+        color: rgb(107, 101, 101);
+        font-size: 1.5em;
+}
+.my__select:focus{
+    background: #252525;
+        box-shadow: 0px 0px 90px 5px #fff;
+        color: #fff;
+}
