@@ -9,7 +9,7 @@ const TokenItem = (props) => {
 
         <div className='token'>
             <div className='token__content' >
-                   <img src={props.token.image.uri} alt="ups"/>              
+                   <img src={props.token.image.uri} alt="Небезопасный адресс"/>              
                    <h3>{props.token.db_id}</h3>
                    <h3>{props.token.name} </h3>
                    <h3>{props.token.update_date} </h3>
