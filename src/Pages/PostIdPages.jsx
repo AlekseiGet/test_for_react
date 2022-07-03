@@ -28,7 +28,7 @@ const PostIdPages = () => {
 
    return (
        <div>
-           <img src={visibilImeg} alt="upss" style={{ width: 300 }} />
+           <img src={visibilImeg} alt="Небезопасный адресс" style={{ width: 300 }} />
        <div className='token__cart' >         
            <h1 style={{ margin: 10 }}>db_id: {visibil.db_id} </h1>
            <h1 style={{ margin: 10 }}>description: {visibil.description} </h1>
