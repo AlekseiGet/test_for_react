@@ -19,7 +19,7 @@ const BackBase = () => {
     const [tokens, setTokens] = useState([]);
     const [filter, setFilter] = useState({ sort: '', query: '' });
     const [totalPages, setTotalPages] = useState(0);
-    const [limit, setLimit] = useState(5);
+    const [limit, setLimit] = useState(25);
     const [page, setPage] = useState(1);
     const lastElement = useRef();
     const observer = useRef();
@@ -40,7 +40,7 @@ const BackBase = () => {
         };
         var callback = function (entries, observer) {
             if (entries[0].isIntersecting && page < totalPages) {
-                setLimit(limit + 5)//добавляю ещё при
+                setLimit(limit + 25)//добавляю ещё при
             }
         };
         observer.current = new IntersectionObserver(callback);
@@ -70,7 +70,7 @@ const BackBase = () => {
 
 
     const sortedAndSearched = useMemo(() => {
-        return queryToken.filter(post => post.name.toLowerCase().includes(filter.query))
+        return queryToken.filter(post => post.title.toLowerCase().includes(filter.query))
     }, [filter.query, queryToken])
 
 

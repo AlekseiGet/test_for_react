@@ -21,7 +21,7 @@ const TokenList = ({ tokens, title, limit, page }) => {
             <h1 style={{ textAlign: 'center' }}> {title}</h1>
             
             {dubl.map(post =>
-                <TokenItem token={post} key={post.token_id} />
+                <TokenItem token={post} key={post.id} />
                 
             )}
         </div>

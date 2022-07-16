@@ -1,7 +1,5 @@
 import React from 'react';
 import {Route, Routes } from 'react-router-dom';
-import About from '../Pages/About';
-import PostIdPages from '../Pages/PostIdPages';
 import { routes } from '../Router/routs';
 
 

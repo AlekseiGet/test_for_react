@@ -9,18 +9,15 @@ export function GetDubl(dubl) {
 
 const PostIdPages = () => {
     const params = useParams()  
-    const paramsDbid = params.db_id   
+    const paramsDbid = params.db_id  //Странно есть db_id а id нет!!!
     let visibil = {};
-   let visibilText ='';
    let visibilImeg = {};
-    
-        
+       
     for (let i = 0; i < receive.length; i++) {
     
-        if (receive[i].db_id == paramsDbid) {
+        if (receive[i].id == paramsDbid) {
             visibil = receive[i]
-            visibilText = JSON.stringify(visibil);
-            visibilImeg = visibil.image.uri
+            visibilImeg = visibil.url  
             break
         }
         
@@ -30,17 +27,12 @@ const PostIdPages = () => {
        <div>
            <img src={visibilImeg} alt="upss" style={{ width: 300 }} />
        <div className='token__cart' >         
-           <h1 style={{ margin: 10 }}>db_id: {visibil.db_id} </h1>
-           <h1 style={{ margin: 10 }}>description: {visibil.description} </h1>
-           <h1 style={{ margin: 10 }}>name: {visibil.name} </h1>
-           <h1 style={{ margin: 10 }}>owner: {visibil.owner} </h1>
-           <h1 style={{ margin: 10 }}>state: {visibil.state} </h1>
-           <h1 style={{ margin: 10 }}>token_id: {visibil.token_id} </h1>
-           <h1 style={{ margin: 10 }}>update_date: {visibil.update_date} </h1>       
+           <h1 style={{ margin: 10 }}>albumId: {visibil.albumId} </h1>
+           <h1 style={{ margin: 10 }}>id: {visibil.id} </h1>
+           <h1 style={{ margin: 10 }}>title: {visibil.title} </h1>
+           
         </div>
-       <div className='token__cart' > 
-               <h1 style={{ margin: 10 }}>{visibilText} </h1>
-       </div>
+       
             
 
   </div>
