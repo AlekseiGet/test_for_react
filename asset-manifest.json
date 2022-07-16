@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test_for_react/static/css/main.1e919b7b.css",
-    "main.js": "/test_for_react/static/js/main.b18cf097.js",
+    "main.css": "/test_for_react/static/css/main.40a8248c.css",
+    "main.js": "/test_for_react/static/js/main.3ad65f17.js",
     "static/media/evmos.png": "/test_for_react/static/media/evmos.a6733872b726e4a6c00e.png",
     "static/media/telegram.png": "/test_for_react/static/media/telegram.96ac58392ac6bd737e88.png",
     "static/media/logo.png": "/test_for_react/static/media/logo.39b9639c6dfbea0f78ad.png",
@@ -17,11 +17,11 @@
     "static/media/vector-13.svg": "/test_for_react/static/media/vector-13.3bc2750858cd619c7d7f0ce1e7d2d3d0.svg",
     "static/media/vector-9.svg": "/test_for_react/static/media/vector-9.418d86ab2d9ad1b70224c11cdab60fa4.svg",
     "index.html": "/test_for_react/index.html",
-    "main.1e919b7b.css.map": "/test_for_react/static/css/main.1e919b7b.css.map",
-    "main.b18cf097.js.map": "/test_for_react/static/js/main.b18cf097.js.map"
+    "main.40a8248c.css.map": "/test_for_react/static/css/main.40a8248c.css.map",
+    "main.3ad65f17.js.map": "/test_for_react/static/js/main.3ad65f17.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e919b7b.css",
-    "static/js/main.b18cf097.js"
+    "static/css/main.40a8248c.css",
+    "static/js/main.3ad65f17.js"
   ]
 }
