@@ -10,11 +10,13 @@ const TokenItem = (props) => {
 
         <div className='token'>
             <div className='token__content' >
+
                 <img src={props.token.url} alt="ups" />              
                 <h3>{props.token.id}</h3>
                 <h3>{props.token.title} </h3>
                
                 <MyButton onClick={() => rounter(`/token/${props.token.id}`) } >Узнать больше</MyButton>
+                   
                </div>
             </div> 
        
