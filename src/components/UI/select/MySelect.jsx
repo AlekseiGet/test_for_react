@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './MySelect.module.css'
 const MySelect = ({ options, defaultValue, value, onChange, name}) => {
-   // console.log(name)
     return (
         <select className={classes.my__select}    
             value = {value}

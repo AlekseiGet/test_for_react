@@ -42,7 +42,7 @@
 .wrapper {
     background-color: #101010;
     color: #fff;
-    min-width: 100%;
+    width: 100%;
     min-height: 100vh;
     padding: 30px 2.8em;
     overflow: hidden;
@@ -115,14 +115,7 @@ a {
     font-size: 3em;
     overflow: auto;
 }
-.token__cart::-webkit-scrollbar {
-    width: 16px;
-}
 
-.token__cart::-webkit-scrollbar-thumb {
-    background-color: #890092;
-    border-radius: 16px;
-}
 
 .token__content {
     width: 100%;
@@ -159,33 +152,50 @@ a {
     display: flex;
     justify-content: center;
     margin-top: 70px;
+   
 }
 
 .pages_button_conteiner{  
-   width: 100%;
-   height: auto;
-   margin-top: 30px;
-   padding: 20px;
-   display: flex;
-   flex-wrap: wrap;
+ 
+}
 
+.pages_button_content{
+   max-width: 50%;
+   margin: 5px;
+   height: auto;
+   display: flex;
+   flex-wrap: nowrap;
+   overflow: auto;
+   border: 1px solid #10101096;
+   border-radius: 13px ;;
+}
+
+.pages_button_content::-webkit-scrollbar {
+    width: 16px;
+}
+
+.pages_button_content::-webkit-scrollbar-thumb {
+    background-color: #00924e;
+    border-radius: 16px;
 }
 
 .page {
     width: 50px;
     height: 50px;
     padding: 15px 12px;
-  //  margin: 3px 3px;
     border: 1px solid #000;
     border-radius: 20%;
     background: #10101096;
     cursor:  pointer;
     color: #fff;
-    border: 2px solid #f00;
+    border: 2px solid white;
+    flex-shrink: 0;
+ 
 }
 .page_current {
-    border: 2px solid orange;
+    border: 3px solid orange;
     font-weight:  bold;
+ 
 }
 
 .navbar {
@@ -306,6 +316,7 @@ a {
 .filter_conteiner{
      display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .app__slider{
@@ -313,17 +324,16 @@ a {
      overflow: hidden;
 }
 .app__slider__content{
-      width: 100%;
-      min-height: 300px;
+    
+    width: 100%;
+    min-height: 300px;
     max-height: 630px;
     border: 1px solid #fff;
     overflow: auto;
     border-radius: 15px;
     margin-top: 20px;
     position: relative;
-    z-index: 2;
-  
-    
+    z-index: 2;    
 }
 
 .app__slider__content::-webkit-scrollbar {
@@ -331,7 +341,7 @@ a {
 }
 
 .app__slider__content::-webkit-scrollbar-thumb {
-    background-color: #890092;
+    background-color: #00924e;
     border-radius: 16px;
 }
 .app__slider__rocket{
@@ -350,11 +360,13 @@ a {
 }
 
 .app__slider__token__conteiner{
- //   display: flex;
-    //flex-direction: row;
+   // min-height: 800px;
+
+   // display: flex;
+   //flex-direction: row;
    // flex-wrap: wrap;
    // justify-content: space-between;
-  // padding: 20px;
+   // padding: 20px;
 }
 
 
@@ -480,7 +492,6 @@ a {
 .social_hover{}
 .app__desctiption__backed{
      font-size: 3vw;
-
     font-weight: 700;
     text-align: center;
     margin-bottom: -20px;

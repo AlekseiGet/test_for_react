@@ -25,9 +25,9 @@ const BackBase = () => {
     const observer = useRef();
 
     const [fetchingToken, isTokenLoading, tokenError] = useFetching(async () => {
-        const response = await TokenService.getAll(limit, page);//запрос на сервер    
+        const response = await TokenService.getAll();//запрос на сервер    
         setTokens(response.data)   //Косяк туту был "setTokens([...tokens,...response.data]) "
-        const totalCount = response.data.length;
+        const totalCount = sortedAndSearched.length;  //response.data
         setTotalPages(getPageCount(totalCount, limit));
     })
 
@@ -48,41 +48,38 @@ const BackBase = () => {
     }, [isTokenLoading])
 
 
-
     const queryToken = useMemo(() => {
 
-        const userSelectedSort = filter.sort.slice(0, -3);
+        const userSelectedSort = filter.sort;
+      
         if (filter.sort) {
 
-            if (filter.sort == 'db_id_UP') {
+            if (filter.sort == 'id_UP') {
                 return ([...tokens].sort((a, b) => a[userSelectedSort] - b[userSelectedSort]))
-            } else if (filter.sort == 'db_id_DO') {
+            } else if (filter.sort == 'id_DO') {
                 return ([...tokens].reverse((a, b) => a[userSelectedSort] - b[userSelectedSort]))
-            } else if (filter.sort == 'name_UP') {
-                return ([...tokens].sort((a, b) => a[userSelectedSort].localeCompare(b[userSelectedSort],)))
-            } else {
-                return ([...tokens].reverse((a, b) => a[userSelectedSort].localeCompare(b[userSelectedSort],)))
-            }
+            } 
 
         }
+
         return tokens
     }, [filter.sort, tokens])
 
-
     const sortedAndSearched = useMemo(() => {
+
         return queryToken.filter(post => post.title.toLowerCase().includes(filter.query))
     }, [filter.query, queryToken])
 
-
     //отработает один раз, [filter] при каждом изменении filter
     useEffect(() => { fetchingToken() }, [page, limit])
-
+   
+   
 
     const changePage = (page) => {
         setPage(page)
 
     }
-
+    
     return (
         <div>
             
@@ -108,9 +105,10 @@ const BackBase = () => {
                                 {tokenError &&
                                     <h1>Произошла ошибка ${tokenError} </h1>
                                 }
-                                <TokenList tokens={sortedAndSearched} title="" limit={limit} page={page} />
+                                <TokenList tokens={sortedAndSearched} title="" limit={limit} page={page}  />
                                 <div ref={lastElement} style={{ height: 20 }}></div>
                                 {isTokenLoading && <div className='loader_conteiner'><Loader /></div>}
+                                
                             </div>
                            
                         </div>

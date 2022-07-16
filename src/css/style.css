@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
   background-color: #101010;
   color: #fff;
-  min-width: 100%;
+  width: 100%;
   min-height: 100vh;
   padding: 30px 2.8em;
   overflow: hidden;
@@ -186,15 +186,6 @@ a {
   overflow: auto;
 }
 
-.token__cart::-webkit-scrollbar {
-  width: 16px;
-}
-
-.token__cart::-webkit-scrollbar-thumb {
-  background-color: #890092;
-  border-radius: 16px;
-}
-
 .token__content {
   width: 100%;
   height: auto;
@@ -230,13 +221,24 @@ a {
   margin-top: 70px;
 }
 
-.pages_button_conteiner {
-  width: 100%;
+.pages_button_content {
+  max-width: 50%;
+  margin: 5px;
   height: auto;
-  margin-top: 30px;
-  padding: 20px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow: auto;
+  border: 1px solid rgba(16, 16, 16, 0.5882352941);
+  border-radius: 13px;
+}
+
+.pages_button_content::-webkit-scrollbar {
+  width: 16px;
+}
+
+.pages_button_content::-webkit-scrollbar-thumb {
+  background-color: #00924e;
+  border-radius: 16px;
 }
 
 .page {
@@ -248,11 +250,12 @@ a {
   background: rgba(16, 16, 16, 0.5882352941);
   cursor: pointer;
   color: #fff;
-  border: 2px solid #f00;
+  border: 2px solid white;
+  flex-shrink: 0;
 }
 
 .page_current {
-  border: 2px solid orange;
+  border: 3px solid orange;
   font-weight: bold;
 }
 
@@ -371,6 +374,7 @@ a {
 .filter_conteiner {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .app__slider {
@@ -395,7 +399,7 @@ a {
 }
 
 .app__slider__content::-webkit-scrollbar-thumb {
-  background-color: #890092;
+  background-color: #00924e;
   border-radius: 16px;
 }
 

@@ -18,10 +18,8 @@ const TokenFilter = ({ filter, setFilter, limit, setLimit } ) => {
                 onChange={selectedSort => setFilter({...filter, sort: selectedSort}) }
                 defaultValue="Сортировка"
                 options={[
-                    { value: 'db_id_UP', name: 'По ID UP' },
-                    { value: 'db_id_DO', name: 'По ID DOWN' },
-                    { value: 'name_UP', name: 'По NAME UP' },
-                    { value: 'name_DO', name: 'По NAME DOWN' }
+                    { value: 'id_UP', name: 'По ID UP' },
+                    { value: 'id_DO', name: 'По ID DOWN' },
 
                 ]}
             />  
